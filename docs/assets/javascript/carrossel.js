@@ -28,3 +28,14 @@
       prevEl: '.swiper-button-prev',
     },
 });
+
+var swiperTestimonials = new Swiper('.swiper-testimonials', {
+  slidesPerView: 1,      
+  spaceBetween: 30,      
+  loop: true,          
+  grabCursor: true,      
+  pagination: {
+      el: '.swiper-testimonials .swiper-pagination',
+      clickable: true,
+  },
+});
