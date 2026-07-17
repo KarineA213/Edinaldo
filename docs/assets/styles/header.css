@@ -1,0 +1,271 @@
+:root{
+    --page-bg:white;
+    --page-bg2:;
+    --text-color:;
+    --text-size-title:3rem;
+    --text-size-banner:1.2rem;
+    --button-padding:;
+    --button-bg:;
+    --gradient-color1:pink;
+    --gradient-color2:purple;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    background-color: light-gray;
+}
+
+.nav-list a{
+    font-family: sans-serif, 'segoe ui';
+    text-decoration: none;
+    color: inherit;
+}
+
+.header{
+    background-color: var(--page-bg);
+    padding-inline:1rem ;
+    overflow: hidden;
+}
+
+.nav{
+    max-width: 100%;
+    height: 4.38rem;
+    margin-inline: auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.logo img{
+    height: 2.5rem;
+    width: auto;
+}
+
+.nav-list{
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+}
+
+
+/* Banner-Início*/
+
+.hero-banner{
+    width: 100%;
+    overflow: hidden;
+    display: block;
+}
+
+.hero-container{
+    background: linear-gradient(to right, var(--gradient-color1), var(--gradient-color2));    width: 100%;
+    min-height: 25rem; 
+    margin: 0 auto;
+    display: flex;
+    padding: 0 4vw;
+    min-width: 14rem;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    gap: 1rem
+;
+
+
+}
+
+.hero-content-text{
+    flex: 1;
+    max-width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 50%;
+}
+
+.hero-title{
+    font-size:var(--text-size-title);
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+
+}
+
+
+.hero-description{
+    font-size: var(--text-size-banner);
+    opacity: 0.5;
+    line-height: 1.5;
+}
+
+.hero-image-wrapper{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    flex: 0 0 50%;
+    height: 100%;
+}
+
+.hero-image{
+    max-width: 35rem;
+    width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+.brands{
+    padding: 2rem 0;
+}
+
+.brand-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1.5rem;
+}
+
+.brand-image {
+    height: 1.5rem; 
+    max-width: 100%;
+    opacity: 0.5; 
+    transition: opacity 0.3s ease;
+  }
+  
+  .brand-image:hover {
+    opacity: 1;
+  }
+
+  .about-us-container{
+    display: flex;
+    justify-content: center;
+    padding: 5vh 5vw;
+    gap: 2rem;
+  }
+
+  .about-us-image{
+    height: 30rem;
+    width: auto;
+    border-radius: 2rem;
+  }
+
+  .about-us-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 25rem;
+  }
+
+  .features-grid{
+    max-width:100%;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-sizing: border-box;
+    align-items: center
+;
+
+  }
+
+  .grid-title{
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .grid-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+
+
+  .grid-container-top, .grid-container-bottom{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .grid-container-top{
+    gap: 1rem;
+  }
+  .grid-container-bottom{
+   gap: 2rem;
+  }
+
+  .grid-image{
+    height: 15rem;
+    width: auto;
+    border-radius: 2rem;
+    object-fit: cover;
+  }
+
+  .grid-image-long{
+    height: 15rem;
+    width: 30rem;
+    border-radius: 2rem;
+    object-fit: cover;
+  }
+
+  .video-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem;
+    gap: 2rem;
+  }
+
+  .video-player{
+    height:25rem ;
+    width: auto;
+
+  }
+
+  
+  .carousel{
+    width: 100%;
+    max-width: 75rem;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    position: relative;
+  }
+    
+    
+    
+    .swiper {
+        width: 100%;
+        height: auto;
+        padding-bottom: 3rem;
+        position: relative;
+
+      }
+
+    .swiper-wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2rem;
+      overflow: hidden;
+    }
+
+    .swiper-slide img{
+        width: 100%;
+        height: 15rem;
+        border-radius: 2rem;
+        object-fit: cover;
+      }
+
+    .swiper-button-next,.swiper-button-prev {
+    color: var(--gradient-color2)
+    }
