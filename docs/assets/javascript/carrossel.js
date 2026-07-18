@@ -8,6 +8,11 @@
     slidesPerView: 1, 
     
     breakpoints: {
+      350:{
+        slidesPerView: 1,
+        spaceBetween: 5,
+      },
+
       640: {
         slidesPerView: 2,
         spaceBetween: 20,

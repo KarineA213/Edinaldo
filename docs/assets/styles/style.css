@@ -150,10 +150,7 @@ body{
 
 .brand-container{
   display: flex;
-  /*justify-content: space-between;
-  margin: 0 1.5rem;
-  padding: 2rem;
-  */
+ 
 
   align-items: center;
   gap: 3rem;
@@ -194,7 +191,7 @@ body{
   .about-us-container{
     display: flex;
     justify-content: center;
-    padding: 5vh 5vw;
+    padding: 5rem;
     gap: 3rem;
     margin-top: 5%;
   }
@@ -211,7 +208,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content:center;
-    max-width: 30rem;
+    max-width: 30%;
     align-items: center;
   }
 
@@ -275,59 +272,46 @@ body{
 
   /*GRID*/
 
-  .features-grid{
-    max-width:100%;
-    padding: 0 2rem;
+   .features-grid {
+    max-width: 100%;
+    padding: 5rem 5rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     box-sizing: border-box;
-    align-items: center
-;
-
+    align-items: center;
   }
-
-  .grid-title{
+  
+  .grid-title {
     font-size: var(--text-size-title);
     font-weight: var(--text-weight-title);
     text-align: center;
     width: 70%;
+    margin-bottom: 1rem;
   }
-
-  .grid-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 2rem;
-  }
-
-
-
-  .grid-container-top, .grid-container-bottom{
-    display: flex;
-    justify-content: center;
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem; 
     width: 100%;
+    max-width: 75rem; 
+    margin: 0 auto;
   }
-
-  .grid-container-top{
-    gap: 1rem;
-  }
-  .grid-container-bottom{
-   gap: 2rem;
-  }
-
-  .grid-image{
+  
+  .grid-image {
     height: 15rem;
-    width: auto;
+    width: 100%;
     border-radius: 2rem;
     object-fit: cover;
   }
-
-  .grid-image-long{
+  
+  .grid-image-long {
     height: 15rem;
-    width: 30rem;
+    width: 100%;
     border-radius: 2rem;
     object-fit: cover;
+    grid-column: span 2; 
   }
 
 
@@ -369,7 +353,7 @@ body{
   
   .carousel{
     width: 100%;
-    max-width: 75rem;
+    max-width: 80rem;
     margin: 4rem auto;
     padding: 0 2rem;
     position: relative;
@@ -392,7 +376,7 @@ body{
   }
     
     
-    .swiper {
+    .swiper-carousel {
         width: 100%;
         height: auto;
         padding-bottom: 3rem;
@@ -400,14 +384,14 @@ body{
 
       }
 
-    .swiper-wrapper{
+    .swiper-wrapper-carousel{
 
         display: flex;
         gap: 1rem;
         padding-bottom: 2rem;
     }
     
-    .swiper-slide{
+    .swiper-slide-carousel{
         padding-bottom: 2rem;
 
     }
@@ -523,24 +507,34 @@ body{
 
     }
 
+    .swiper-wrapper-testimonials{
+      width: 100%;
+    }
+
     .testimonial-content h1{
       font-size: var(--text-size-title);
       font-weight: var(--text-weight-title);
       text-align: center;
+      margin-bottom: 2rem;
 
 
     }
 
     .swiper-testimonials{
 
-      width: 60%;
+      width: 65%;
       margin: 0 auto;
-      padding-bottom: 4rem;
       display: block;
+      height: auto;
+      overflow: visible;
+      padding-bottom: 3rem;
+
     }
 
     .swiper-slide-testimonials{
       width: 100%;
+      display: flex;
+      justify-content: center;
     }
 
     .slide-content{
@@ -548,11 +542,18 @@ body{
       flex-direction: column;
       align-items: center;
       background: lightgray;
-      border-radius: 2rem;
-      padding: 1rem 2rem;
-
+      border-radius: 1rem;
+      padding: 1.5rem 2rem;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 5rem;
 
     }
+
+    .swiper-testimonials, .swiper-wrapper-testimonials{
+      height: auto;
+    }
+
 
     .slide-text{
       display: flex;
@@ -571,6 +572,10 @@ body{
       font-weight: 500;
       line-height: 1.5rem;
       padding: 2rem;
+
+      max-height: 12rem;
+      overflow-y: auto;
+      padding-right: 0.5rem;
 
     }
 
@@ -592,7 +597,7 @@ body{
     .slide-author-img{
       border-radius: 50%;
       height: 7rem;
-      width: auto;
+      width: 7rem;
       display:block;
       object-fit:cover;
       flex-shrink: 0;
@@ -632,6 +637,7 @@ body{
   width: 60%;
   height: auto;
   place-items: center;
+
   
 }
 
@@ -641,9 +647,11 @@ body{
   height: 20rem;
   object-fit: cover;
   border-radius: 2rem;
+
 }
 
 .cta-banner{
+  height: 60%;
   grid-area: 1/1;
   display:flex;
   flex-direction: column;
@@ -679,6 +687,7 @@ body{
 }
 
 .cta-banner button{
+  grid-area: 1/1;
   padding: 0.8rem 1.2rem;
   border-radius: 1rem;
   cursor: pointer;
@@ -791,6 +800,93 @@ p, h3{
 
 @media (max-width: 760px) {
 
+    .hamburguer {
+      display: block;
+      z-index: 10000;
+      background: transparent;
+      cursor: pointer;
+      border: none;
+      border-top: 2px solid black;
+
+    }
+  
+    .nav-list {
+      top: 0;
+      right: 0;
+      width: 100vw;
+      height: 80vh;
+      background: white;
+      clip-path:calc(0.5rem + 2px) circle(0 at 90% -15%);
+      transition: 1.3s ease-out;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0;
+      position: absolute;
+
+  
+      cursor: pointer;;
+    }
+  
+    .nav-list a {
+      font-size: 24px;
+      opacity: 0;
+    }
+
+    .nav-list li:hover{
+      border-bottom: 2px solid black;     
+
+    }
+
+    .nav-list li:nth-child(1) a {
+      transition: 0.5s 0.2s;
+
+    }
+  
+    .nav-list li:nth-child(2) a {
+      transition: 0.5s 0.3s;
+    }
+
+    .nav-list li:nth-child(3) a {
+      transition: 0.5s 0.2s;
+    }
+
+    .nav-list li:nth-child(4) a {
+      transition: 0.5s 0.3s;
+    }
+  
+  
+    .nav.active .nav-list {
+      clip-path: circle(1500px at 90% -15%);
+      pointer-events: all;
+    }
+  
+    .nav.active .nav-list a {
+      opacity: 1;
+    }
+  
+    .nav.active .hamburguer {
+      position: fixed;
+      top: 26px;
+      right: 16px;
+      border-top-color: black;
+    }
+  
+    .nav.active .hamburguer::before {
+      transform: rotate(45deg);
+      top: 0.5rem;
+    }
+  
+    .nav.active .hamburguer::after {
+      transform: rotate(-45deg);
+      top: 0.5rem;
+    }
+
+
+
+
+
+
   footer{
       position: static;
   }
@@ -810,7 +906,7 @@ p, h3{
       flex-wrap: wrap;
       justify-content: center;
       text-align: center;
-      gap: 2rem; /* espaço entre blocos */
+      gap: 2rem; 
 
   }
 
