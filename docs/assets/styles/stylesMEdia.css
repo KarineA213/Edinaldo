@@ -1,6 +1,15 @@
+@media (min-width: 800px) and (max-width: 1200px) {
+  .callout-image img{
+    width: auto;
+    height: 100%;
+  }
 
+  .callout-space{
+    display: none;
+  }
+}
 
-@media (max-width: 1000px) {
+@media (max-width: 799px) {
 
     
 :root{
@@ -22,89 +31,148 @@ html, body{
     overflow-x:hidden ;
    
 }
+/*NAV BAR*/
+  .nav-container{
+    display:flex ;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
 
+  .nav__toggle{
+    font-size: 2rem;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    z-index: 10000;
+  }
+
+  
+  .nav__menu{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background: white;
+    transition: .3s;
+    z-index: 9999;
+    padding-top:4rem;
+   
+  }
+
+
+
+  .nav__menu.show-menu{
+    left: 0;
+  }
+
+  .nav__list{
+    list-style: none;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav__link{
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: none;
+  }
+
+  ;.nav__close{
+    display: none;
+  }
+
+  .show-icon .nav__burger{
+    display: none;
+  }
+
+  .show-icon .nav__close{
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .dropdown__menu {
+    position: static; 
+    width: 100%;
+    background-color: #f9f9f9; 
+    max-height: 0;
+    overflow: hidden;
+    opacity: 1;          
+    visibility: visible; 
+    box-shadow: none; 
+    transition: max-height 0.3s ease-out;
+    padding: 0;
+  }
+  
+  .dropdown-open .dropdown__menu {
+    max-height: 20rem; 
+    padding: 0.5rem 0;
+  }
+  
+  .dropdown__link {
+    display: block;
+    padding: 0.75rem 2rem;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .dropdown-open .dropdown__arrow {
+    transform: rotate(180deg);
+  }
+  .dropdown__arrow {
+    transition: transform 0.3s;
+  }
+  
+
+  .dropdown__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+    /*HERO */
+
+    .hero-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        gap: 0;
+    }
     
-
-    .hamburguer {
-      display: block;
-      z-index: 10000;
-      background: transparent;
-      cursor: pointer;
-      border: none;
-      border-top: 2px solid black;
-
+    .hero-image-wrapper{
+        order: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
-  
-    .nav-list {
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 80vh;
-      background: white;
-      clip-path:calc(0.5rem + 2px) circle(0 at 90% -15%);
-      transition: 1.3s ease-out;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      gap: 0;
-      position: absolute;
-
-  
-      cursor: pointer;;
+    
+    .hero-image{
+        width: 100%;
+        height: 18rem;
+        display: block;
+        object-fit: cover;
+        
     }
-  
-    .nav-list a {
-      font-size: 24px;
-      opacity: 0;
+    
+    .hero-content-text{
+        order: 2;
+        width: 100%;
+        padding: 2rem 1rem;
+        background: rgb(216,47,97);
+        box-sizing: border-box;
     }
 
-    .nav-list li:hover{
-      border-bottom: 2px solid black;     
-
-    }
-
-    .nav-list li:nth-child(1) a {
-      transition: 0.5s 0.2s;
-
-    }
-  
-    .nav-list li:nth-child(2) a {
-      transition: 0.5s 0.3s;
-    }
-
-    .nav-list li:nth-child(3) a {
-      transition: 0.5s 0.2s;
-    }
-
-    .nav-list li:nth-child(4) a {
-      transition: 0.5s 0.3s;
-    }
-  
-  
-    .nav.active .nav-list {
-      clip-path: circle(1500px at 90% -15%);
-      pointer-events: all;
-    }
-  
-    .nav.active .nav-list a {
-      opacity: 1;
-    }
-  
-    .nav.active .hamburguer {
-      position: fixed;
-      top: 26px;
-      right: 16px;
-      border-top-color: black;
-    }
-  
-    .nav.active .hamburguer::before {
-      transform: rotate(45deg);
-      top: 0.5rem;
-    }
-  
-    .nav.active .hamburguer::after {
-      transform: rotate(-45deg);
-      top: 0.5rem;
+    .brands{
+        padding: 5rem;
     }
 
     /*ABOUT US*/
@@ -195,7 +263,7 @@ html, body{
     }
 
     .features-grid {
-        padding: 0 1.5rem; 
+        padding: 0 1rem; 
         box-sizing: border-box;
     }
 
@@ -220,29 +288,28 @@ html, body{
     /*VIDEO*/
 
     .video-container{
-        width: 90%;
-        padding: 2rem;
-        gap: 0.5rem;
+        width: 100%;
         align-items: center;
+        justify-content: center;
+        padding: 2rem 0;
     }
 
     .video-player{
-        width: 100%;
+        width: 80%;
         height: auto;
-    
         border-radius: 1rem;
     }
 
-    /*CARROSSEL*/
+   /*CARROSSEL*/
 
-    .carousel{
-        width: 100%;
-        align-items:center ;
-        text-align: center;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        margin: 0;
+   .carousel{
+    width: 100%;
+    align-items:center ;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
     }
 
     .carousel-text{
@@ -265,11 +332,11 @@ html, body{
         padding: 1rem 0;
         width: 100%;
         gap: 0.2rem;
-  
+
     }
 
     .swiper-slide-carousel{
-    
+
         text-align: start;
     }
 
@@ -280,14 +347,13 @@ html, body{
     .swiper-pagination{
     }
 
-
-    /*CALL OUTS*/
-    .callout-container{
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        position: relative;
-    }
+        /*CALL OUTS*/
+        .callout-container{
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            position: relative;
+        }
 
     .callout-banner{
         display: flex;
@@ -338,7 +404,8 @@ html, body{
         flex-direction: column;
         justify-content: center;
         box-sizing: border-box;
-        position: relative;   ??
+        position: relative;  
+        
 
     }
 
@@ -498,5 +565,14 @@ html, body{
       flex-direction: column;
       align-content: center;
   }
+
+
 }
 
+@media screen and (max-width: 340px) {
+    
+  
+    .nav__link {
+      padding-inline: 1rem;
+    }
+  }

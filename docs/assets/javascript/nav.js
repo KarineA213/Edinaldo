@@ -1,4 +1,18 @@
-const hamburguer = document.querySelector(".hamburguer");
-const nav = document.querySelector(".nav");
+const toggle = document.getElementById("nav-toggle");
+const nav = document.getElementById("nav-menu");
 
-hamburguer.addEventListener("click", () => nav.classList.toggle("active"));
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("show-menu");
+  toggle.classList.toggle("show-icon");
+});
+
+/* DROPDOWN */
+const dropdowns = document.querySelectorAll(".dropdown__item");
+
+dropdowns.forEach(item => {
+  const btn = item.querySelector(".dropdown__button");
+
+  btn.addEventListener("click", () => {
+    item.classList.toggle("dropdown-open");
+  });
+});
