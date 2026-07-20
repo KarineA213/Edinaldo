@@ -492,7 +492,7 @@ body{
 
   
     .carousel-img{
-        width: 90%;
+        width: 100%;
 
         border-radius: 2rem;
         object-fit: cover;
@@ -806,87 +806,100 @@ body{
 
 /*FOOTER*/
 
+.f-padding{
+  background: rgba(238, 235, 235, 0.363);
+  align-items: center;
+}
+
+.footer-container{
+  display: flex;
+  padding: 2rem 5rem;
+  width: 100%;
+  gap: 2rem;
+  justify-content: center;
+
+}
+
 .footer-content{
-  width: 33.3%;
+align-items: start;
+
 }
-h3{
-  font-size: 28px;
-  margin-bottom: 15px;
-  text-align: center;
+.footer-content h3{
+  font-size: .8rem;
+  color: gray;
+  padding: 1rem;
 }
+
 .footer-content p{
-  width:300px;
-  margin: auto;
-  padding: 7px;
+  width:18rem;
+  
 }
-.footer-content ul{
+
+
+.footer-image img{
+  height: 1.5rem;
+}
+
+.footer-text p{
+  color: gray;
+  font-size: .8rem;
+  line-height: 1rem;
+  text-align: start;
+}
+
+.footer-list{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+}
+
+.footer-list a{
+  text-decoration: none;
+  color: black;
+  padding: .5rem ;
   text-align: center;
-}
+  font-size: .8rem;
 
-p, h3{
-  color: var(--text-color);
-}
-
-.list a{
-  color: var(--text-color);
 }
 
 
+.footer-list a:hover{
+  background-color: rgba(211, 211, 211, 0.493);
+  border-radius: 2rem;
+}
 
-.list{
-  padding: 0;
-}
-.list li{
-  width: auto;
-  text-align: center;
-  list-style-type:none;
-  padding: 7px;
-  position: relative;
-}
-.list li::before{
-  content: '';
-  position: absolute;
-  transform: translate(-50%,-50%);
-  left: 50%;
-  top: 100%;
-  width: 0;
-  height: 2px;
-  background: var(--page-bg);
-  transition-duration: .5s;
-}
-.list li:hover::before{
-  width: 70px;
-}
+
+
+
 .social-icons{
-  text-align: center;
+  text-align: start;
   padding: 0;
 }
 .social-icons li{
   display: inline-block;
-  text-align: center;
   padding: 5px;
+  align-items: start;
+  text-decoration: none;
 }
 .social-icons i{
   color: black;
   font-size: 25px;
 }
 
-.f-link:link, .f-link:visited, .f-link:active {
-  color: var(--page-bg); 
-}
-
-.social-icons i:hover{
-  color: var(--page-bg);
-}
 .bottom-bar{
-  background: var(--page-bg);
-  text-align: center;
-  padding: 3px;
+text-align: end;
 
 }
 .bottom-bar p{
-  color: #343434;
-  margin: 0;
-  font-size: 16px;
-  padding: 7px;
+  font-size: 1rem;
+  padding: 1rem;
+  color: gray;
+}
+
+.bottom-space{
+  background: linear-gradient(to right, blue, blueviolet);
+  padding: .8rem;
+
+width: 100%;
 }

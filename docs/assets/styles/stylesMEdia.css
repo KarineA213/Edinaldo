@@ -344,11 +344,13 @@ html, body{
         padding: 1rem 0 1rem 0 ;
     }
 
-    .swiper-pagination{
+    .swiper-button-next,.swiper-button-prev {
+        display: none;
+         
     }
 
         /*CALL OUTS*/
-        .callout-container{
+    .callout-container{
             width: 100%;
             max-width: 100%;
             box-sizing: border-box;
@@ -533,39 +535,60 @@ html, body{
     }
 
 
+/*FOOTER*/
+@media (max-width: 799px){
 
+    .footer-image{
+        padding: 1.5rem 0;
 
-  footer{
-      position: static;
-  }
-  
+    }
 
-  .bottom-bar p{
+    .footer-text{
+        padding: 1rem 0;
+    }
 
-      font-size: 10px;
-
-  }
-
-  main{
-      padding-bottom:16px;
-  }
-  .container{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      text-align: center;
-      gap: 2rem; 
-
-  }
-
-  .footer-content{
-      width: 100%;
-      margin: auto;
-      display: flex;
+    .footer-container{
       flex-direction: column;
-      align-content: center;
+      padding: 1rem;
+    }
+  
+    .footer-content h3{
+      background: #e5e5e5;
+      border-radius: 10px;
+      padding: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+    }
+  
+    .footer-content h3::after{
+      content: "⌄";
+      transition: .3s;
+    }
+  
+    .footer-list{
+      max-height: 0;
+      overflow: hidden;
+      transition: .3s;
+      gap: 1rem;
+    }
+  
+    .footer-content.active .footer-list{
+      max-height: 200px;
+      padding: .5rem 0;
+    }
+  
+    .footer-content.active h3::after{
+      transform: rotate(180deg);
+    }
+  
+    .footer-list a{
+      text-align: left;
+      padding-left: 1rem;
+    }
   }
-
 
 }
 
