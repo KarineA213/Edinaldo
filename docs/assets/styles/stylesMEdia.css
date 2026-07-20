@@ -1,12 +1,27 @@
 @media (min-width: 800px) and (max-width: 1200px) {
-  .callout-image img{
-    width: auto;
-    height: 100%;
-  }
 
-  .callout-space{
-    display: none;
-  }
+    .hero-container{
+        flex-direction: row;
+        height: auto;
+        padding: 2rem;
+      }
+      
+      .hero-image{
+        height: 18rem;
+      }
+
+      .carousel{
+        padding: 0 1rem;
+      }
+      
+      .carousel-img{
+        width: 100%;
+      }
+
+      .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+      }
+
 }
 
 @media (max-width: 799px) {
