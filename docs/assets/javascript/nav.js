@@ -6,7 +6,7 @@ toggle.addEventListener("click", () => {
   toggle.classList.toggle("show-icon");
 });
 
-/* DROPDOWN */
+
 const dropdowns = document.querySelectorAll(".dropdown__item");
 
 dropdowns.forEach(item => {
