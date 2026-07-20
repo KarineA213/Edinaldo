@@ -4,7 +4,7 @@
 
 :root{
     --page-bg:white;
-    --text-size-title:2rem;
+    --text-size-title:1.5rem;
     --text-weight-title:500;
     --text-size-banner:1.2rem;
     --gradient-color1:pink;
@@ -471,7 +471,7 @@ body{
     
     
     .swiper-carousel {
-        width: 100%;
+        width: 95%;
         height: auto;
         padding-bottom: 3rem;
         position: relative;
@@ -492,7 +492,7 @@ body{
 
   
     .carousel-img{
-        width: 100%;
+        width: 90%;
 
         border-radius: 2rem;
         object-fit: cover;
@@ -605,13 +605,9 @@ body{
       width: 100%;
     }
 
-    .testimonial-content h1{
+    .testimonial-title{
       font-size: var(--text-size-title);
-      font-weight: var(--text-weight-title);
       text-align: center;
-      margin-bottom: 2rem;
-
-
     }
 
     .swiper-testimonials{
